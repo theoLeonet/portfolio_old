@@ -11,6 +11,23 @@ add_filter('use_block_editor_for_post', '__return_false');
 add_theme_support('post-thumbnails');
 
 //Create a new Timber instance
+$timber = new Timber();
+
+// Register menus
+register_nav_menu('primary', 'Navigation principale (haut de page)');
+register_nav_menu('secondary', 'Navigation secondaire (bas de page)');
+
+//Add a filter, so I can add stuff to the context
+add_filter('timber/context', 'add_to_context');
+
+function add_to_context(array $context): array
+{
+    // Add Timber Menu and send it to the context.
+    $context['primary_menu'] = new \Timber\Menu('primary');
+    $context['footer_menu'] = new \Timber\Menu('secondary');
+
+    return $context;
+}
 
 function portfolio_mix($path)
 {
