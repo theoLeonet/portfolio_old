@@ -1,0 +1,26 @@
+<!doctype html>
+<html {{ site.language_attributes }}>
+<head>
+    <meta charset="{{ site.charset }}">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ function('portfolio_mix', 'css/main.css') }}">
+    <script type="text/javascript" src="{{ function('portfolio_mix', 'js/Main.js') }}"></script>
+    <title>{{ __('Theo’s portfolio', 'portfolio') }}</title>
+</head>
+<body class="body">
+    <h1 class="sr-only">
+        {{ site.name }}
+    </h1>
+    <header class="header">
+
+    </header>
+
+    {% block body '' %}
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>

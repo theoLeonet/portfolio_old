@@ -1,0 +1,16 @@
+/*
+!.gitignore
+!README.md
+!database.sql
+!package.json
+!package-lock.json
+!webpack.mix.js
+
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/portfolio
+/wp-content/themes/portfolio/public
+/wp-content/themes/portfolio/vendor
+/wp-content/themes/portfolio/assets/fonts
