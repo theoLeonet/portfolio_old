@@ -3,7 +3,100 @@
 {% block body %}
 
     <main class="home">
+        <section class="home__introduction">
+            <h2 class="home__introduction__title">
+                {{ __('Introdution.', 'portfolio') }}
+            </h2>
+            <p class="home__introduction__text1">
+                {{ __('Environment friendly web lover.', 'portfolio') }}
+            </p>
+            <p class="home__introduction__text2">
+                {{ __('Plain black coffee addict.', 'portfolio') }}
+            </p>
+            <p class="home__introduction__text2">
+                {{ __('Solution finder and problem solver.', 'portfolio') }}
+            </p>
+            <div class="home__introduction__scroll-indicator">
 
+            </div>
+        </section>
+        <section class="home__main">
+            <h2 class="home__main__title">
+                {{ __('Main part', 'portfolio') }}
+            </h2>
+            <div class="home__main__about">
+                <h3 class="home__main__about__title">
+                    {{ __('Hi, I’m Théo Léonet', 'portfolio') }}
+                    <span class="home__main__title__emoji__container">
+                    <img src=""
+                         alt="{{ __('Waving hand emoji', 'portfolio') }}"
+                         class="home__main__title__emoji">
+                </span>
+                </h3>
+                <a href=""
+                   class="home__main__subtitle">
+                    {{ __('Wanna know more about me?', 'portfolio') }}
+                </a>
+            </div>
+            <div class="home__main__latest-work">
+                <h3 class="home__main__latest-work__title">
+                    {{ __('Here’s my latest work.', 'portfolio') }}
+                </h3>
+                <a href=""
+                   class="home__main__latest-work__more">
+
+                </a>
+            </div>
+        </section>
+        <section class="home__contact"
+                 id="contact">
+            <h2 class="home__contact__title">
+                Let's create something great together
+            </h2>
+            <form action="" class="home__contact__form">
+                <div class="home__contact__form__field">
+                    <label for="full-name"
+                           class="home__contact__form__field__label">
+                        {{ __('Full name', 'portfolio') }}
+                    </label>
+                    <input type="text"
+                           class="home__contact__form__field__input"
+                           id="full-name">
+                </div>
+                <div class="home__contact__form__field">
+                    <label for="e-mail"
+                           class="home__contact__form__field__label">
+                        {{ __('Email', 'portfolio') }}
+                    </label>
+                    <input type="email"
+                           class="home__contact__form__field__input"
+                           id="e-mail">
+                </div>
+                <div class="home__contact__form__field">
+                    <label for="message"
+                           class="home__contact__form__field__label">
+                        {{ __('Your message', 'portfolio') }}
+                    </label>
+                    <textarea name="message"
+                              id="message"
+                              cols="30"
+                              rows="10"
+                              class="home__contact__form__field__textarea">
+                    </textarea>
+                    <button type="submit"
+                            class="home__contact__form__send">
+                        <img src=""
+                             alt="">
+                    </button>
+                </div>
+            </form>
+            <p class="home__contact__direct-email">
+                {{ __('Or email me at', 'portfolio') }}
+                <a href="mailto:theoleonet.dev@gmail.com">
+                    theoleonet.dev@gmail.com
+                </a>
+            </p>
+        </section>
     </main>
 
 {% endblock %}
