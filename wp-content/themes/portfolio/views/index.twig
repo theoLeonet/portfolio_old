@@ -42,6 +42,9 @@
                 <h3 class="home__main__latest-work__title">
                     {{ __('Here’s my latest work.', 'portfolio') }}
                 </h3>
+                {% for work in latest_works %}
+                    {% include '/partials/_work.twig' %}
+                {% endfor %}
                 <a href=""
                    class="home__main__latest-work__more">
 
@@ -51,7 +54,7 @@
         <section class="home__contact"
                  id="contact">
             <h2 class="home__contact__title">
-                Let's create something great together
+                {{ __('Let’s create something great together', 'portfolio') }}
             </h2>
             <form action="" class="home__contact__form">
                 <div class="home__contact__form__field">

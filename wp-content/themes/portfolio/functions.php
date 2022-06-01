@@ -29,6 +29,23 @@ function add_to_context(array $context): array
     return $context;
 }
 
+//register a custom post type for the works
+register_post_type('work', [
+    'label' => 'Works',
+    'labels' => [
+        'name' => 'Works',
+        'singular_name' => 'Work',
+    ],
+    'description' => 'All the work i’ve done',
+    'public' => true,
+    'has_archive' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-hammer',
+    'supports' => ['title', 'thumbnail'],
+    'rewrite' => ['slug' => 'works'],
+]);
+
+
 function portfolio_mix($path)
 {
     $path = '/' . ltrim($path, '/');

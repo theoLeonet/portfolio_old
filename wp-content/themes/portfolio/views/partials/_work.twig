@@ -1,0 +1,15 @@
+<article class="work">
+    <a href="{{ work.link }}"
+       class="work__link">
+        {{ __('See more', 'portfolio') }}
+    </a>
+    <img src=""
+         alt=""
+         class="work__image">
+    <h2 class="work__title">
+        {{ work }}
+    </h2>
+    <p class="work__date">
+        {{ work.meta('date') }}
+    </p>
+</article>
