@@ -1,0 +1,34 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+    <main class="about">
+        <h2 class="about__title sr-only">
+            {{ __('About', 'portfolio') }}
+        </h2>
+        <section class="about__main">
+            <h3 class="about__main__title">
+                {{ __('That’s me! Sort of...', 'portfolio') }}
+            </h3>
+            <div class="about__main__text">
+                {{ post.content }}
+            </div>
+            <div class="about__main__music">
+
+            </div>
+            <div class="about__main__contact">
+                <p class="about__main__contact__tagline">
+                    {{ __('But that’s enough talking about me! How about you tell me about you? *', 'portfolio') }}
+                </p>
+                <a href="mailto:theoleonet.dev@gmail.com"
+                   class="about__main__contact__link">
+                    theoleonet.dev@gmail.com
+                </a>
+                <p class="about__main__contact__asterisk">
+                    {{ __('Come on, don’t be shy!', 'portfolio') }}
+                </p>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
