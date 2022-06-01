@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+    <main class="works">
+        <p class="works__introduction">
+            {{ __('Here we goooooo...', 'portfolio') }}
+        </p>
+        {% for work in works %}
+            {% include '/partials/_work.twig' %}
+        {% endfor %}
+        <p class="works__outro">
+            That's it! Hope you enjoyed.
+        </p>
+    </main>
+
+{% endblock %}

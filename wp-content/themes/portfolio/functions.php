@@ -45,6 +45,59 @@ register_post_type('work', [
     'rewrite' => ['slug' => 'works'],
 ]);
 
+// Add a unique name field to acf
+add_filter('acf/validate_value/name=' . 'unique_name', 'acf_unique_value_field', 10, 4);
+
+function acf_unique_value_field($valid, $value, $field, $input)
+{
+    if (!$valid || (!isset($_POST['post_ID']) && !isset($_POST['post_id']))) {
+        return $valid;
+    }
+    if (isset($_POST['post_ID'])) {
+        $post_id = intval($_POST['post_ID']);
+    } else {
+        $post_id = intval($_POST['post_id']);
+    }
+    if (!$post_id) {
+        return $valid;
+    }
+    $post_type = get_post_type($post_id);
+    $field_name = $field['name'];
+    $args = array(
+        'post_type' => $post_type,
+        'post_status' => 'publish, draft, trash',
+        'post__not_in' => [$post_id],
+        'meta_query' => [
+            [
+                'key' => $field_name,
+                'value' => $value
+            ]
+        ]
+
+    );
+    $query = new WP_Query($args);
+    if (count($query->posts)) {
+        return 'This Value is not Unique. Please enter a unique ' . $field['label'];
+    }
+    return true;
+}
+
+// Find a post based on its unique name
+function portfolio_get_by_unique_name(string $post_type, string $post_unique_name = null)
+{
+    $post = new WP_Query([
+        'post_type' => $post_type,
+        'meta_query' => [
+            [
+                'key' => 'nom_unique',
+                'value' => $post_unique_name,
+            ],
+        ]
+    ]);
+
+    return $post->post;
+}
+
 
 function portfolio_mix($path)
 {
