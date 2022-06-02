@@ -1,4 +1,5 @@
 .home__main {
+  position: absolute;
   transform-origin: 100% 0;
   transform: scaleY(0) translateY(100vh);
   padding: 40vh 0 2em;
@@ -31,9 +32,11 @@
 
 @keyframes main {
   0% {
+    position: relative;
     transform: scaleY(1) translateY(100vh);
   }
   100% {
+    position: relative;
     transform: scaleY(1) translateY(0);
   }
 }

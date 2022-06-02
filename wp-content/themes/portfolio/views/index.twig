@@ -59,7 +59,7 @@
             <form action="{{ function('admin_url', 'admin-post.php') | e('esc_url') }}"
                   method="post"
                   class="home__contact__form">
-                <div class="home__contact__form__field">
+                <div class="home__contact__form__field fullname__field">
                     <label for="fullname"
                            class="home__contact__form__field__label">
                         {{ __('Full name', 'portfolio') }}
@@ -71,7 +71,7 @@
                            value="{{ function('portfolio_get_contact_field_value', 'fullname') }}">
                     {{ function('portfolio_get_contact_field_error', 'fullname') }}
                 </div>
-                <div class="home__contact__form__field">
+                <div class="home__contact__form__field email__field">
                     <label for="email"
                            class="home__contact__form__field__label">
                         {{ __('Email', 'portfolio') }}
@@ -83,7 +83,7 @@
                            value="{{ function('portfolio_get_contact_field_value', 'email') }}">
                     {{ function('portfolio_get_contact_field_error', 'email') }}
                 </div>
-                <div class="home__contact__form__field">
+                <div class="home__contact__form__field message__field">
                     <label for="message"
                            class="home__contact__form__field__label">
                         {{ __('Your message', 'portfolio') }}
@@ -95,15 +95,14 @@
                               class="home__contact__form__field__textarea">{{ function('portfolio_get_contact_field_value', 'message') }}</textarea>
                     {{ function('portfolio_get_contact_field_error', 'message') }}
                 </div>
-                <div class="home__contact__form__actions">
+                <div class="home__contact__form__actions actions__field">
                     {{ function('wp_nonce_field', 'nonce_submit_contact_form') }}
                     <input type="hidden"
                            name="action"
                            value="submit_contact_form"/>
                     <button type="submit"
                             class="home__contact__form__send">
-                        <img src=""
-                             alt="">
+                        {{ __('Send', 'portfolio') }}
                     </button>
                 </div>
             </form>
