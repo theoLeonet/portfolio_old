@@ -1,0 +1,29 @@
+.footer {
+  min-height: 64px;
+  padding: calc(clamp(32px, 2.5vw, 48px) + clamp(64px, 4.1666666667vw, 80px)) 0 calc((clamp(32px, 2.5vw, 48px) + clamp(64px, 4.1666666667vw, 80px)) / 2);
+
+  font-family: $fonts;
+
+  background: $black;
+  color: $white;
+}
+
+.footer__nav__container {
+  display: grid;
+  row-gap: 1em;
+  width: clamp(320px - clamp(14px, 1.25vw, 24px) * 4, 70vw, 1152px);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .footer__nav__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer__nav__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
