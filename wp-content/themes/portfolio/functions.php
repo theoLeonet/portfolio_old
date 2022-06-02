@@ -1,5 +1,6 @@
 <?php
 
+use Portfolio\Controllers\ContactFormController;
 use Timber\Timber;
 
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -9,6 +10,19 @@ add_filter('use_block_editor_for_post', '__return_false');
 
 //support for thumbnails
 add_theme_support('post-thumbnails');
+
+add_action('init', 'portfolio_session', 1);
+
+function portfolio_session()
+{
+    if (!session_id()) {
+        session_start();
+    }
+
+    if (isset($_SESSION['contact_form_feedback']['success'])) {
+        session_destroy();
+    }
+}
 
 //Create a new Timber instance
 $timber = new Timber();
@@ -98,6 +112,35 @@ function portfolio_get_by_unique_name(string $post_type, string $post_unique_nam
     return $post->post;
 }
 
+//Things to do on form sending
+add_action('admin_post_nopriv_submit_contact_form', 'portfolio_handle_submit_contact_form');
+
+function portfolio_handle_submit_contact_form()
+{
+    $form = new ContactFormController($_POST);
+}
+
+function portfolio_get_contact_field_value($field)
+{
+    if (!isset($_SESSION['contact_form_feedback'])) {
+        return '';
+    }
+
+    return $_SESSION['contact_form_feedback']['data'][$field] ?? '';
+}
+
+function portfolio_get_contact_field_error($field)
+{
+    if (!isset($_SESSION['contact_form_feedback'])) {
+        return '';
+    }
+
+    if (!($_SESSION['contact_form_feedback']['errors'][$field] ?? null)) {
+        return '';
+    }
+
+    return '<p>' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
+}
 
 function portfolio_mix($path)
 {
