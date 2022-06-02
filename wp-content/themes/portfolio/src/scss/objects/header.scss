@@ -1,0 +1,58 @@
+body {
+  height: 200vh;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: clamp(calc(320px - clamp(14px, 1.25vw, 24px) * 4), 80vw, 1152px);
+  margin: clamp(32px, 2.5vw, 48px) auto 0 auto;
+  padding: 0 calc(clamp(14px, 1.25vw, 24px) * 2);
+
+  background: $header-bg;
+  border-radius: .5em;
+}
+
+.header__nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(64px, 4.1666666667vw, 80px);
+}
+
+.header__nav__item {
+  font-family: $fonts;
+  font-size: clamp(14px, 1.25vw, 24px);
+}
+
+.header__nav__item__link {
+  color: $white;
+}
+
+.item__home, .item__github, .item__twitter {
+  width: 1em;
+  height: 1em;
+
+  overflow: hidden;
+}
+
+.link__home, .link__github, .link__twitter {
+  color: transparent;
+}
+
+.item__home {
+  background: url($images + 'flower_logo.png') no-repeat center;
+  background-size: contain;
+}
+
+.item__github {
+  background: url($images + 'github_logo.png') no-repeat center;
+  background-size: contain;
+}
+
+.item__twitter {
+  background: url($images + 'twitter_logo.png') no-repeat center;
+  background-size: contain;
+}
