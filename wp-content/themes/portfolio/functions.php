@@ -39,7 +39,8 @@ function add_to_context(array $context): array
     // Add Timber Menu and send it to the context.
     $context['header_nav'] = new \Timber\Menu('header_nav');
     $context['footer_nav'] = new \Timber\Menu('footer_nav');
-
+    $context['days_left'] = (new DateTime("2023-06-30"))->diff(new DateTime('now'))->format("%a");
+    
     return $context;
 }
 
