@@ -1,16 +1,26 @@
 .home__introduction {
-  background: white;
-  height: 100vh;
+  position: absolute;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 10;
 
   font-family: $fonts;
   font-size: clamp(40px, 4.5833333333vw, 88px);
+
+  background: white;
 }
 
 .home__introduction__text1, .home__introduction__text2, .home__introduction__text3 {
-  position: absolute;
   width: 40vw;
-  left: calc(100% - 70vw);
-  top: calc(100% - 50vh - 88px);
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
 
 .home__introduction__text1 {

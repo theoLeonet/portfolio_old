@@ -1,0 +1,39 @@
+.home__main {
+  transform-origin: 100% 0;
+  transform: scaleY(0) translateY(100vh);
+  padding: 40vh 0 2em;
+
+  background: $black;
+  animation-name: main;
+  animation-duration: 3s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.home__main__about {
+  width: 80%;
+  margin: 0 auto;
+
+  font-family: $fonts;
+  color: $white;
+}
+
+.home__main__about__title {
+  font-size: clamp(24px, 4.5833333333vw, 88px);
+}
+
+.home__main__about__subtitle {
+  display: inline-block;
+  margin: 1em 0;
+
+  font-size: clamp(16px, 1.6666666667vw, 32px);
+}
+
+@keyframes main {
+  0% {
+    transform: scaleY(1) translateY(100vh);
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
