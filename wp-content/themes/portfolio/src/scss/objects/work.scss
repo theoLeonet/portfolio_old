@@ -1,0 +1,31 @@
+.work {
+  position: relative;
+
+  font-family: $fonts;
+  font-size: clamp(16px, 2.0833333333vw, 40px);
+}
+
+.work__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  color: transparent;
+}
+
+.work__image {
+  width: 100%;
+
+  border-radius: .5em;
+}
+
+.work__infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work__title, .work__date {
+  margin-top: 1em;
+}
