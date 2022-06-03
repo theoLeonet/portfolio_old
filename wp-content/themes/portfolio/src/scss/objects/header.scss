@@ -26,6 +26,10 @@
 
 .header__nav__item__link {
   color: $white;
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 .item__home, .item__github, .item__twitter {
@@ -37,6 +41,10 @@
 
 .link__home, .link__github, .link__twitter {
   color: transparent;
+
+  &:hover {
+    color: transparent;
+  }
 }
 
 .item__home {

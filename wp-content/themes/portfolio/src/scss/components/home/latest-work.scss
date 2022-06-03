@@ -26,9 +26,23 @@
   justify-self: center;
   align-self: center;
 
-  background: url($images + 'more_works_button.svg') no-repeat center;
+  background-image: url($images + 'more_works_button.svg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: contain;
   color: transparent;
+
+  &:hover {
+    background-image: url($images + 'more_works_button_hover.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation-name: more_rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
 
 
@@ -43,5 +57,14 @@
 
   .home__main__latest-work__more {
     grid-column: 2/-1;
+  }
+}
+
+@keyframes more_rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

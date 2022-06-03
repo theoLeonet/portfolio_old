@@ -18,7 +18,7 @@
 }
 
 .home__introduction__text1, .home__introduction__text2, .home__introduction__text3 {
-  width: 40vw;
+  width: clamp(256px, 40vw, 768px);
   grid-column: 1/-1;
   grid-row: 1/-1;
 }

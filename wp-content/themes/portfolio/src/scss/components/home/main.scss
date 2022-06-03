@@ -2,7 +2,7 @@
   position: absolute;
   transform-origin: 100% 0;
   transform: scaleY(0) translateY(100vh);
-  padding: 40vh 0 2em;
+  padding: 35vh 0 2em;
 
   background: $black;
   animation-name: main;
@@ -23,11 +23,26 @@
   font-size: clamp(24px, 4.5833333333vw, 88px);
 }
 
+.home__main__title__emoji__container {
+  display: inline-grid;
+}
+
+.home__main__title__emoji {
+  transform: translateY(.25em);
+  align-self: center;
+  justify-self: center;
+  width: 1em;
+}
+
 .home__main__about__subtitle {
   display: inline-block;
   margin: 1em 0;
 
   font-size: clamp(16px, 1.6666666667vw, 32px);
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 @keyframes main {
