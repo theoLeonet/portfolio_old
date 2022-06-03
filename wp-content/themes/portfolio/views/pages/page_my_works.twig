@@ -6,9 +6,11 @@
         <p class="works__introduction">
             {{ __('Here we goooooo...', 'portfolio') }}
         </p>
-        {% for work in works %}
-            {% include '/partials/_work.twig' %}
-        {% endfor %}
+        <div class="works__works__container">
+            {% for work in works %}
+                {% include '/partials/_work.twig' %}
+            {% endfor %}
+        </div>
         <p class="works__outro">
             That's it! Hope you enjoyed.
         </p>

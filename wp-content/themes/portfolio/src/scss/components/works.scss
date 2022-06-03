@@ -1,0 +1,27 @@
+.works {
+  padding: calc(clamp(32px, 2.5vw, 48px) * 2 + clamp(64px, 4.1666666667vw, 80px)) 10vw 0;
+  min-height: calc(100vh - 112px - calc((clamp(32px, 2.5vw, 48px) * 2 + clamp(64px, 4.1666666667vw, 80px)) * 1.75));
+
+  font-family: $fonts;
+
+  background: black;
+  color: $white;
+}
+
+.works__works__container {
+  display: grid;
+  gap: clamp(32px, 4.1666666667vw, 80px);
+  margin: clamp(64px, 6.6666666667vw, 128px) auto;
+}
+
+.works__introduction, .works__outro {
+  width: clamp(160px, 21.5vw, 400px);
+
+  font-size: clamp(24px, 3.333vw, 64px);
+}
+
+@media screen and (min-width: 800px) {
+  .works__works__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
