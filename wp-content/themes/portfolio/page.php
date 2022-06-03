@@ -11,7 +11,9 @@ $context['post'] = $timber_post;
 if ($timber_post->meta('unique_name') == 'my_works') {
     $context['works'] = Timber::get_posts([
         'post_type' => 'work',
-        'order_by' => 'desc',
+        'meta_key' => 'date',
+        'orderby' => 'meta_value',
+        'order' => 'DESC',
         'posts_per_page' => -1,
     ]);
 }

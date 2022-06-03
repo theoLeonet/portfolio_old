@@ -13,6 +13,14 @@
   row-gap: 1em;
   width: clamp(320px - clamp(14px, 1.25vw, 24px) * 4, 70vw, 1152px);
   margin: 0 auto;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {

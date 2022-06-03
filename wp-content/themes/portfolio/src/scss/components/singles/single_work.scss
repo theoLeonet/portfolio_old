@@ -10,6 +10,10 @@
 
   background: $black;
   color: $white;
+
+  .work__link {
+    pointer-events: none;
+  }
 }
 
 .single .work {

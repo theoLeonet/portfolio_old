@@ -7,6 +7,7 @@
 
 .work__link {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -15,10 +16,26 @@
   color: transparent;
 }
 
+.work__image__container {
+  overflow: hidden;
+  border-radius: .5em;
+  aspect-ratio: 1920/1080;
+}
+
+.work__link:hover {
+  ~ .work__image__container {
+
+    .work__image {
+      transition: 200ms;
+      transform: scale(1.5);
+    }
+  }
+}
+
 .work__image {
+  transition: 200ms;
   width: 100%;
 
-  border-radius: .5em;
 }
 
 .work__infos {

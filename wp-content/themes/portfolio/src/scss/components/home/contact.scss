@@ -76,10 +76,10 @@
   text-align: right;
 
   a {
-    color: $accent;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      color: $accent;
     }
   }
 }

@@ -39,6 +39,7 @@
   margin: 1em 0;
 
   font-size: clamp(16px, 1.6666666667vw, 32px);
+  text-decoration: underline;
 
   &:hover {
     color: $accent;

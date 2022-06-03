@@ -58,10 +58,10 @@
 .about__main__contact__link {
   font-size: clamp(24px, 4.1666666667vw, 80px);
 
-  color: $accent;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    color: $accent;
   }
 }
 

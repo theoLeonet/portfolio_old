@@ -3,12 +3,14 @@
        class="work__link">
         {{ __('See more', 'portfolio') }}
     </a>
-    <img src="{{ work.thumbnail.src }}"
-         srcset="{{ work.thumbnail.srcset }}"
-         sizes="(max-width: 1920px) 100vw, 1920px"
-         loading="lazy"
-         alt="{{ work.thumbnail.alt }}"
-         class="work__image"/>
+    <div class="work__image__container">
+        <img src="{{ work.thumbnail.src }}"
+             srcset="{{ work.thumbnail.srcset }}"
+             sizes="(max-width: 1920px) 100vw, 1920px"
+             loading="lazy"
+             alt="{{ work.thumbnail.alt }}"
+             class="work__image"/>
+    </div>
     <div class="work__infos">
         <h2 class="work__title">
             {{ work }}

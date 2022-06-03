@@ -50,14 +50,29 @@
 .item__home {
   background: url($images + 'flower_logo.png') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url($images + 'flower_logo_hover.png') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .item__github {
   background: url($images + 'github_logo.png') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url($images + 'github_logo_hover.png') no-repeat center;
+    background-size: contain;
+  }
 }
 
 .item__twitter {
   background: url($images + 'twitter_logo.png') no-repeat center;
   background-size: contain;
+
+  &:hover {
+    background: url($images + 'twitter_logo_hover.png') no-repeat center;
+    background-size: contain;
+  }
 }
