@@ -40,7 +40,7 @@ function add_to_context(array $context): array
     $context['header_nav'] = new \Timber\Menu('header_nav');
     $context['footer_nav'] = new \Timber\Menu('footer_nav');
     $context['days_left'] = (new DateTime("2023-06-30"))->diff(new DateTime('now'))->format("%a");
-    
+
     return $context;
 }
 
@@ -56,7 +56,7 @@ register_post_type('work', [
     'has_archive' => true,
     'menu_position' => 5,
     'menu_icon' => 'dashicons-hammer',
-    'supports' => ['title', 'thumbnail'],
+    'supports' => ['title', 'thumbnail', 'editor'],
     'rewrite' => ['slug' => 'works'],
 ]);
 

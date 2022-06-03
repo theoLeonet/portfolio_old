@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+    <main class="single single__{{ work.slug }}">
+        {% include '/partials/_work.twig' %}
+
+        <section class="single__work__about">
+            <div class="single__work__about__content">
+                {{ work.content }}
+            </div>
+            <a href="{{ work.meta('website_link') }}" class="single__work__about__link">
+                {{ __('See the website', 'portfolio') }}
+            </a>
+        </section>
+
+        <section class="single__other">
+            <h2 class="sr-only">
+                {{ __('See my other works', 'portfolio') }}
+            </h2>
+            <div class="single__other__previous">
+                <a href="{{ previous_work.link }}" class="single__other__previous__link">
+                    {{ previous_work }}
+                </a>
+                <img src="{{ previous_work.thumbnail }}" alt="" class="single__other__previous__image">
+            </div>
+            <div class="single__other__next">
+                <a href="{{ next_work.link }}" class="single__other__next__link">
+                    {{ next_work }}
+                </a>
+                <img src="{{ next_work.thumbnail }}" alt="" class="single__other__next__image">
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
