@@ -1,49 +1,12 @@
-/*
-@media screen and (min-width: 700px) and (min-height: 600px) {
-
-  .footer {
-    position: relative;
-    display: grid;
-    align-self: end;
-    justify-self: start;
-    height: 100vh;
-    min-width: 30vw;
-    z-index: 5;
-    font-family: $fonts;
-
-    background: $black;
-    color: $white;
-  }
-
-  .footer__nav {
-    align-self: center;
-  }
-
-  .footer__nav__container {
-    padding: 0 clamp(0px, 3vw, 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60vh;
-
-    a {
-      text-decoration: underline;
-
-      &:hover {
-        color: $accent;
-      }
-    }
-  }
-}*/
-
 .footer {
-  font-family: $fonts;
   align-self: end;
   display: grid;
+  height: max-content;
+
+  font-family: $fonts;
 
   background: $black;
   color: $white;
-  height: max-content;
 }
 
 .footer__nav {
@@ -72,6 +35,7 @@
   .footer__nav__container {
     flex-direction: row;
   }
+
   #js {
     .blog {
       .footer {
@@ -79,12 +43,8 @@
 
         .footer__nav__container {
           padding: 0 10vw;
-          display: flex;
           flex-direction: column;
-          justify-content: space-between;
           height: 60vh;
-
-
         }
       }
     }

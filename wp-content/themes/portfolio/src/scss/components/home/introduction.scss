@@ -84,9 +84,9 @@
   .home__introduction {
     position: fixed;
     z-index: -1;
-    width: 100vw;
 
     .home__introduction__text1, .home__introduction__text2, .home__introduction__text3 {
+      animation: none;
       position: fixed;
       top: 45vh;
       left: calc(50vw - clamp(130px, 35vw, 400px) / 2);

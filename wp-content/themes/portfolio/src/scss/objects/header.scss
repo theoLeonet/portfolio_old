@@ -16,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   min-height: clamp(64px, 4.1666666667vw, 80px);
 }
 
@@ -35,7 +34,7 @@
 
 .item__home, .item__github, .item__twitter {
   width: 1em;
-  height: 1em;
+  aspect-ratio: 1/1;
 
   overflow: hidden;
 }

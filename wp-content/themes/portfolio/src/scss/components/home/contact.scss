@@ -1,14 +1,17 @@
 .home__contact {
-  background: $white;
   padding: 20vh 10vw;
-  font-family: $fonts;
   border-radius: 2em 2em 0 0;
+
+  font-family: $fonts;
+
+  background: $white;
   color: $black;
 }
 
 .home__contact__title {
-  font-size: clamp(24px, 3.333vw, 64px);
   margin-bottom: 10vh;
+
+  font-size: clamp(24px, 3.333vw, 64px);
 }
 
 .home__contact__form {
@@ -27,12 +30,14 @@
   font-size: clamp(16px, 2.0833333333vw, 40px);
 }
 
+.home__contact__form__field__input {
+  max-height: 1rem;
+}
+
 .home__contact__form__field__input, .home__contact__form__field__textarea {
   padding: .5em;
 
   font-size: 1rem;
-
-  max-height: 1rem;
 
   border: 2px solid $black;
   border-radius: .5em;
@@ -65,6 +70,7 @@
 
 .home__contact__direct-email {
   margin-top: 10vh;
+
   font-size: clamp(16px, 2.0833333333vw, 40px);
   text-align: right;
 

@@ -42,7 +42,7 @@ class ContactFormController extends BaseFormController
         ];
 
         // On redirige l'utilisateur vers le formulaire pour y afficher le feedback d'erreurs.
-        return wp_safe_redirect(($this->data['_wp_http_referer'] ?? ''), 302);
+        return wp_safe_redirect(($this->data['_wp_http_referer'] . '#contact' ?? ''), 302);
     }
 
     protected function handle()
