@@ -1,6 +1,5 @@
 .about {
   width: 100vw;
-  min-height: calc(100vh - 112px - calc((clamp(32px, 2.5vw, 48px) + clamp(64px, 4.1666666667vw, 80px)) * 1.5));
   background: $black;
 }
 
@@ -70,10 +69,4 @@
 
   font-size: clamp(12px, 1.6666666667vw, 32px);
   text-align: right;
-}
-
-@media screen and (min-width: 600px) {
-  .about {
-    min-height: calc(100vh - 64px - calc((clamp(32px, 2.5vw, 48px) + clamp(64px, 4.1666666667vw, 80px)) * 1.5));
-  }
 }

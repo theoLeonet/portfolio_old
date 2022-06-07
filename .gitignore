@@ -11,6 +11,10 @@
 !/wp-content/themes
 /wp-content/themes/*
 !/wp-content/themes/portfolio
-/wp-content/themes/portfolio/public
+!/wp-content/themes/portfolio/public
+/wp-content/themes/portfolio/public/*
+!/wp-content/themes/portfolio/public/js
+/wp-content/themes/portfolio/public/js/*
+!/wp-content/themes/portfolio/public/js/animations.js
 /wp-content/themes/portfolio/vendor
 /wp-content/themes/portfolio/assets/fonts

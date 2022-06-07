@@ -1,0 +1,7 @@
+<svg viewBox="0 0 52 102" xmlns="http://www.w3.org/2000/svg">
+    <rect fill="none" height="100" rx="25" width="50" x="1" y="1"/>
+    <g fill="#1d1d1b">
+        <path d="M26 102A26 26 0 0 1 0 76V26a26 26 0 0 1 52 0v50a26 26 0 0 1-26 26zM26 2A24 24 0 0 0 2 26v50a24 24 0 0 0 48 0V26A24 24 0 0 0 26 2z"/>
+        <circle class="scroll__indicator__circle" cx="26" cy="26" r="16.16"/>
+    </g>
+</svg>

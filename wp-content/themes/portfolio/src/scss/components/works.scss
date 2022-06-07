@@ -1,6 +1,5 @@
 .works {
   padding: calc(clamp(32px, 2.5vw, 48px) * 2 + clamp(64px, 4.1666666667vw, 80px)) 10vw 0;
-  min-height: calc(100vh - 112px - calc((clamp(32px, 2.5vw, 48px) * 2 + clamp(64px, 4.1666666667vw, 80px)) * 1.75));
 
   font-family: $fonts;
 

@@ -140,7 +140,7 @@ function portfolio_get_contact_field_error($field)
         return '';
     }
 
-    return '<p>' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
+    return '<p class="contact__form__error">' . $_SESSION['contact_form_feedback']['errors'][$field] . '</p>';
 }
 
 function portfolio_mix($path)

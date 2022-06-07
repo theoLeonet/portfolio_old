@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <main class="home">
+    <main class="home__page">
         <section class="home__introduction">
             <h2 class="home__introduction__title sr-only">
                 {{ __('Introdution.', 'portfolio') }}
@@ -14,102 +14,113 @@
                 {{ __('Plain black coffee addict.', 'portfolio') }}
             </p>
             <p class="home__introduction__text3">
-                {{ __('Solution finder and problem solver.', 'portfolio') }}
+                {{ __('Ideas finder and problem solver.', 'portfolio') }}
             </p>
+            <div class="scroll__indicator">
+                <svg viewBox="0 0 52 102" xmlns="http://www.w3.org/2000/svg">
+                    <rect fill="none" height="100" rx="25" width="50" x="1" y="1"/>
+                    <g fill="#1d1d1b">
+                        <path d="M26 102A26 26 0 0 1 0 76V26a26 26 0 0 1 52 0v50a26 26 0 0 1-26 26zM26 2A24 24 0 0 0 2 26v50a24 24 0 0 0 48 0V26A24 24 0 0 0 26 2z"/>
+                        <circle class="scroll__indicator__circle" cx="26" cy="26" r="16.16"/>
+                    </g>
+                </svg>
+            </div>
         </section>
-        <section class="home__main">
-            <h2 class="home__main__title sr-only">
-                {{ __('Main part', 'portfolio') }}
-            </h2>
-            <div class="home__main__about">
-                <h3 class="home__main__about__title">
-                    {{ __('Hi, I’m Théo Léonet', 'portfolio') }}
-                    <span class="home__main__title__emoji__container">
+        <div class="home__main-contact__container">
+            <section class="home__main">
+                <h2 class="home__main__title sr-only">
+                    {{ __('Main part', 'portfolio') }}
+                </h2>
+                <div class="home__main__about">
+                    <h3 class="home__main__about__title">
+                        {{ __('Hi, I’m Théo Léonet', 'portfolio') }}
+                        <span class="home__main__title__emoji__container">
                     <img src="https://portfolio.test/wp-content/themes/portfolio/assets/images/waving_hand.png"
                          alt="{{ __('Waving hand emoji', 'portfolio') }}"
                          class="home__main__title__emoji">
                 </span>
-                </h3>
-                <a href="https://portfolio.test/about"
-                   class="home__main__about__subtitle">
-                    {{ __('Wanna know more about me?', 'portfolio') }}
-                </a>
-            </div>
-            <div class="home__main__latest-work">
-                <h3 class="home__main__latest-work__title">
-                    {{ __('Here’s my latest work.', 'portfolio') }}
-                </h3>
-                {% for work in latest_works %}
-                    {% include '/partials/_work.twig' %}
-                {% endfor %}
-                <a href="https://portfolio.test/my-works"
-                   class="home__main__latest-work__more">
-                    {{ __('View my other works', 'portfolio') }}
-                </a>
-            </div>
-        </section>
-        <section class="home__contact"
-                 id="contact">
-            <h2 class="home__contact__title">
-                {{ __('Let’s create something great together', 'portfolio') }}
-            </h2>
-            <form action="{{ function('admin_url', 'admin-post.php') | e('esc_url') }}"
-                  method="post"
-                  class="home__contact__form">
-                <div class="home__contact__form__field fullname__field">
-                    <label for="fullname"
-                           class="home__contact__form__field__label">
-                        {{ __('Full name', 'portfolio') }}
-                    </label>
-                    <input type="text"
-                           name="fullname"
-                           class="home__contact__form__field__input"
-                           id="fullname"
-                           value="{{ function('portfolio_get_contact_field_value', 'fullname') }}">
-                    {{ function('portfolio_get_contact_field_error', 'fullname') }}
+                    </h3>
+                    <a href="https://portfolio.test/about"
+                       class="home__main__about__subtitle">
+                        {{ __('Wanna know more about me?', 'portfolio') }}
+                    </a>
                 </div>
-                <div class="home__contact__form__field email__field">
-                    <label for="email"
-                           class="home__contact__form__field__label">
-                        {{ __('Email', 'portfolio') }}
-                    </label>
-                    <input type="email"
-                           name="email"
-                           class="home__contact__form__field__input"
-                           id="email"
-                           value="{{ function('portfolio_get_contact_field_value', 'email') }}">
-                    {{ function('portfolio_get_contact_field_error', 'email') }}
+                <div class="home__main__latest-work">
+                    <h3 class="home__main__latest-work__title">
+                        {{ __('Here’s my latest work.', 'portfolio') }}
+                    </h3>
+                    {% for work in latest_works %}
+                        {% include '/partials/_work.twig' %}
+                    {% endfor %}
+                    <a href="https://portfolio.test/my-works"
+                       class="home__main__latest-work__more">
+                        {{ __('View my other works', 'portfolio') }}
+                    </a>
                 </div>
-                <div class="home__contact__form__field message__field">
-                    <label for="message"
-                           class="home__contact__form__field__label">
-                        {{ __('Your message', 'portfolio') }}
-                    </label>
-                    <textarea name="message"
-                              id="message"
-                              cols="30"
-                              rows="10"
-                              class="home__contact__form__field__textarea">{{ function('portfolio_get_contact_field_value', 'message') }}</textarea>
-                    {{ function('portfolio_get_contact_field_error', 'message') }}
-                </div>
-                <div class="home__contact__form__actions actions__field">
-                    {{ function('wp_nonce_field', 'nonce_submit_contact_form') }}
-                    <input type="hidden"
-                           name="action"
-                           value="submit_contact_form"/>
-                    <button type="submit"
-                            class="home__contact__form__send">
-                        {{ __('Send', 'portfolio') }}
-                    </button>
-                </div>
-            </form>
-            <p class="home__contact__direct-email">
-                {{ __('Or email me at', 'portfolio') }}
-                <a href="mailto:dev@theoleonet.be">
-                    dev@theoleonet.be
-                </a>
-            </p>
-        </section>
+            </section>
+            <section class="home__contact"
+                     id="contact">
+                <h2 class="home__contact__title">
+                    {{ __('Let’s create something great together', 'portfolio') }}
+                </h2>
+                <form action="{{ function('admin_url', 'admin-post.php') | e('esc_url') }}"
+                      method="post"
+                      class="home__contact__form">
+                    <div class="home__contact__form__field fullname__field">
+                        <label for="fullname"
+                               class="home__contact__form__field__label">
+                            {{ __('Full name*', 'portfolio') }}
+                        </label>
+                        <input type="text"
+                               name="fullname"
+                               class="home__contact__form__field__input"
+                               id="fullname"
+                               value="{{ function('portfolio_get_contact_field_value', 'fullname') }}">
+                        {{ function('portfolio_get_contact_field_error', 'fullname') }}
+                    </div>
+                    <div class="home__contact__form__field email__field">
+                        <label for="email"
+                               class="home__contact__form__field__label">
+                            {{ __('Email*', 'portfolio') }}
+                        </label>
+                        <input type="email"
+                               name="email"
+                               class="home__contact__form__field__input"
+                               id="email"
+                               value="{{ function('portfolio_get_contact_field_value', 'email') }}">
+                        {{ function('portfolio_get_contact_field_error', 'email') }}
+                    </div>
+                    <div class="home__contact__form__field message__field">
+                        <label for="message"
+                               class="home__contact__form__field__label">
+                            {{ __('Your message*', 'portfolio') }}
+                        </label>
+                        <textarea name="message"
+                                  id="message"
+                                  cols="30"
+                                  rows="10"
+                                  class="home__contact__form__field__textarea">{{ function('portfolio_get_contact_field_value', 'message') }}</textarea>
+                        {{ function('portfolio_get_contact_field_error', 'message') }}
+                    </div>
+                    <div class="home__contact__form__actions actions__field">
+                        {{ function('wp_nonce_field', 'nonce_submit_contact_form') }}
+                        <input type="hidden"
+                               name="action"
+                               value="submit_contact_form"/>
+                        <button type="submit"
+                                class="home__contact__form__send">
+                            {{ __('Send', 'portfolio') }}
+                        </button>
+                    </div>
+                </form>
+                <p class="home__contact__direct-email">
+                    {{ __('Or email me at', 'portfolio') }}
+                    <a href="mailto:dev@theoleonet.be">
+                        dev@theoleonet.be
+                    </a>
+                </p>
+            </section>
+        </div>
     </main>
 
 {% endblock %}

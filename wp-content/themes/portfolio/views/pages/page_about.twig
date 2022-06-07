@@ -11,9 +11,9 @@
                 {{ __('That’s me! Sort of...', 'portfolio') }}
             </h3>
             <div class="about__main__text">
-                <p> As said earlier, I’m a code / web design lover with a heavy focus on environmental issues. </p>
-                <p>I’m currently pursuing a Bachelor at “La Haute école de la Province de Liège” in Belgium.
-                    If everything goes well, I should be available for you to hire in {{ days_left }} days.
+                <p> {{ __('I’m a code / web design lover with a heavy focus on environmental issues.', 'portfolio') }}  </p>
+                <p>{{ __('I’m currently pursuing a Bachelor at “La Haute école de la Province de Liège” in Belgium.
+                    If everything goes well, I should be available for you to hire in ' ~ days_left ~ ' days', 'portfolio') }}
                 </p>
                 {{ post.content }}
             </div>
