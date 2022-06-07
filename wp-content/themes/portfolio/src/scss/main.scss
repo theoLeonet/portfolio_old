@@ -4,3 +4,11 @@
 @import "utilities";
 @import "objects/objects";
 @import "components/components";
+
+* {
+  :focus {
+    border: 1px solid $accent;
+    outline: 1px solid $accent;
+    box-shadow: $accent 0 0 10px;
+  }
+}

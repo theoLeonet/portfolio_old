@@ -33,13 +33,16 @@
 }
 
 .item__home, .item__github, .item__twitter {
-  width: 1em;
+  width: 1.2em;
   aspect-ratio: 1/1;
 
   overflow: hidden;
 }
 
 .link__home, .link__github, .link__twitter {
+  display: block;
+  width: 1em;
+  aspect-ratio: 1/1;
   color: transparent;
 
   &:hover {
