@@ -21,13 +21,13 @@
 }
 
 .single__work__about__content {
-  font-size: clamp(24px, 1.5vw, 32px);
+  font-size: clamp(16px, 1.6666666667vw, 32px);
   line-height: 1.5em;
   margin-bottom: 1em;
 }
 
 .single__work__about__link {
-  font-size: clamp(24px, 1.5vw, 32px);
+  font-size: clamp(16px, 1.6666666667vw, 32px);
   text-decoration: underline;
 
   &:hover {
@@ -39,25 +39,12 @@
   grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
-  margin-top: clamp(32px, 3.333vw, 64px);
+  margin: clamp(32px, 3.333vw, 64px) 0;
 }
 
 .single__other__next {
   position: relative;
   width: 10vw;
-
-  &:hover {
-    .single__other__next__image {
-      opacity: 1;
-    }
-
-    .single__other__next__link {
-      opacity: 0;
-      width: 150%;
-      aspect-ratio: 1920/1080;
-      transform: rotate(-10deg) translate(-25%, -35%);
-    }
-  }
 }
 
 .single__other__next__link {
@@ -67,34 +54,13 @@
   font-size: clamp(16px, 1.5vw, 32px);
 }
 
-.single__other__next__image {
-  transition: 200ms;
-  opacity: 0;
-  position: absolute;
-  width: 150%;
-  transform: rotate(10deg) translate(-25%, -35%);
-
-  z-index: 0;
-
-  border-radius: .5em;
+.single__other__next__image, .single__other__previous__image {
+  width: 0;
 }
 
 .single__other__previous {
   position: relative;
   width: 10vw;
-
-  &:hover {
-    .single__other__previous__image {
-      opacity: 1;
-    }
-
-    .single__other__previous__link {
-      opacity: 0;
-      width: 150%;
-      aspect-ratio: 1920/1080;
-      transform: rotate(-10deg) translate(-25%, -35%);
-    }
-  }
 }
 
 .single__other__previous__link {
@@ -104,15 +70,61 @@
   font-size: clamp(16px, 1.5vw, 32px);
 }
 
-.single__other__previous__image {
-  transition: 200ms;
-  opacity: 0;
-  position: absolute;
-  width: 150%;
-  transform: rotate(-10deg) translate(-25%, -35%);
-  z-index: 0;
+@media screen and (hover: hover) {
+  .single__other__next {
 
-  border-radius: .5em;
+    &:hover {
+      .single__other__next__image {
+        opacity: 1;
+      }
+
+      .single__other__next__link {
+        opacity: 0;
+        width: 150%;
+        aspect-ratio: 1920/1080;
+        transform: rotate(-10deg) translate(-25%, -35%);
+      }
+    }
+  }
+
+  .single__other__next__image {
+    transition: 200ms;
+    opacity: 0;
+    position: absolute;
+    width: 150%;
+    transform: rotate(10deg) translate(-25%, -35%);
+
+    z-index: 0;
+
+    border-radius: .5em;
+  }
+
+  .single__other__previous {
+
+    &:hover {
+      .single__other__previous__image {
+        opacity: 1;
+      }
+
+      .single__other__previous__link {
+        opacity: 0;
+        width: 150%;
+        aspect-ratio: 1920/1080;
+        transform: rotate(-10deg) translate(-25%, -35%);
+      }
+    }
+  }
+
+  .single__other__previous__image {
+    transition: 200ms;
+    opacity: 0;
+    position: absolute;
+    width: 150%;
+    transform: rotate(-10deg) translate(-25%, -35%);
+    z-index: 0;
+
+    border-radius: .5em;
+  }
 }
 
 @media screen and (min-width: 800px) {

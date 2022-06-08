@@ -17,7 +17,10 @@
                 {{ __('Ideas finder and problem solver.', 'portfolio') }}
             </p>
             <div class="scroll__indicator">
-                <svg viewBox="0 0 52 102" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 52 102" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <title>
+                        {{ __('Scroll indicator. A black circle is moving up and down in a black outlined squirle.', 'portfolio') }}
+                    </title>
                     <rect fill="none" height="100" rx="25" width="50" x="1" y="1"/>
                     <g fill="#1d1d1b">
                         <path d="M26 102A26 26 0 0 1 0 76V26a26 26 0 0 1 52 0v50a26 26 0 0 1-26 26zM26 2A24 24 0 0 0 2 26v50a24 24 0 0 0 48 0V26A24 24 0 0 0 26 2z"/>
@@ -35,12 +38,12 @@
                     <h3 class="home__main__about__title">
                         {{ __('Hi, I’m Théo Léonet', 'portfolio') }}
                         <span class="home__main__title__emoji__container">
-                    <img src="https://portfolio.test/wp-content/themes/portfolio/assets/images/waving_hand.png"
-                         alt="{{ __('Waving hand emoji', 'portfolio') }}"
-                         class="home__main__title__emoji">
-                </span>
+                            <img src="https://theoleonet.be/wp-content/themes/portfolio/assets/images/waving_hand.png"
+                                 alt="{{ __('Waving hand emoji', 'portfolio') }}"
+                                 class="home__main__title__emoji">
+                        </span>
                     </h3>
-                    <a href="https://portfolio.test/about"
+                    <a href="https://theoleonet.be/about"
                        class="home__main__about__subtitle">
                         {{ __('Wanna know more about me?', 'portfolio') }}
                     </a>
@@ -52,7 +55,7 @@
                     {% for work in latest_works %}
                         {% include '/partials/_work.twig' %}
                     {% endfor %}
-                    <a href="https://portfolio.test/my-works"
+                    <a href="https://theoleonet.be/my-works"
                        class="home__main__latest-work__more">
                         {{ __('View my other works', 'portfolio') }}
                     </a>

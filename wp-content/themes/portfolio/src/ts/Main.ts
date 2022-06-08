@@ -7,17 +7,21 @@ class Main {
         this.contact = document.querySelector('#contact');
 
         document.querySelector('.link__contact').addEventListener('click', () => {
-            if (document.URL === 'https://localhost:3000/#contact') {
-                if (location.hash === '#contact') {
-                    window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+            if (document.URL === 'https://theoleonet.be/#contact') {
+                if (innerWidth > 700) {
+                    if (location.hash === '#contact') {
+                        window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+                    }
                 }
             }
         })
 
         addEventListener('hashchange', () => {
-            if (document.URL === 'https://localhost:3000/#contact') {
-                if (location.hash === '#contact') {
-                    window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+            if (document.URL === 'https://theoleonet.be/#contact') {
+                if (innerWidth > 700) {
+                    if (location.hash === '#contact') {
+                        window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+                    }
                 }
             }
         })
@@ -33,9 +37,11 @@ addEventListener('load', () => {
 
     const contact = document.querySelector('#contact') as HTMLElement;
 
-    if (document.URL === 'https://localhost:3000/#contact') {
-        if (location.hash === '#contact') {
-            window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+    if (document.URL === 'https://theoleonet.be/#contact') {
+        if (innerWidth > 700) {
+            if (location.hash === '#contact') {
+                window.scrollTo(0, document.documentElement.offsetHeight / 100 * 85);
+            }
         }
     }
 })

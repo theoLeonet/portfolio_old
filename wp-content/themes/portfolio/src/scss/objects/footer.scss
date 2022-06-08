@@ -13,6 +13,10 @@
   align-self: center;
 }
 
+.footer__nav__item {
+  font-size: clamp(16px, 1.666667vw, 32px);
+}
+
 .footer__nav__container {
   padding: 10vh 10vw;
   display: flex;

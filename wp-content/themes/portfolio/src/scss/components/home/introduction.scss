@@ -80,6 +80,12 @@
   }
 }
 
+@media screen and (orientation: landscape) and (max-height: 800px) {
+  .home__introduction__text1, .home__introduction__text2, .home__introduction__text3, .scroll__indicator {
+    transform: translateY(-10vh);
+  }
+}
+
 #js {
   .home__introduction {
     position: fixed;

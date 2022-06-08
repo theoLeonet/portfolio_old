@@ -4,6 +4,11 @@
   width: 80vw;
 
   font-family: $fonts;
+
+  .work {
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 .home__main__latest-work__title {

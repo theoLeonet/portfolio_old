@@ -1,5 +1,5 @@
 <!doctype html>
-<html {{ site.language_attributes }} id="nojs">
+<html {# {{ site.language_attributes }} #} lang="en">
 <head>
     <meta charset="{{ site.charset }}">
     <meta name="viewport"
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ function('portfolio_mix', 'css/main.css') }}">
     <script type="text/javascript" src="{{ function('portfolio_mix', 'js/Main.js') }}"></script>
     {% if function('is_front_page') %}
-        <script type="module" src="{{ function('portfolio_mix', 'js/animations.js') }}"></script>
+        <script type="module" src="{{ function('portfolio_mix', 'js/animations_min.js') }}"></script>
     {% endif %}
     <title>{{ __('Theo’s portfolio', 'portfolio') }}</title>
 </head>

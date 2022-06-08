@@ -9,9 +9,11 @@
             <div class="single__work__about__content">
                 {{ work.content }}
             </div>
-            <a href="{{ work.meta('website_link') }}" class="single__work__about__link">
-                {{ __('See the website', 'portfolio') }}
-            </a>
+            {% if work.meta('unique_name') is not same as 'portfolio' %}
+                <a href="{{ work.meta('website_link') }}" class="single__work__about__link">
+                    {{ __('See the website', 'portfolio') }}
+                </a>
+            {% endif %}
         </section>
 
         <section class="single__other">

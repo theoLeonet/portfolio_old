@@ -6,7 +6,12 @@
 @import "components/components";
 
 * {
-  :focus {
+  :focus:not(:focus-visible) {
+    outline: none;
+    border: none;
+  }
+
+  :focus-visible {
     border: 1px solid $accent;
     outline: 1px solid $accent;
     box-shadow: $accent 0 0 10px;
