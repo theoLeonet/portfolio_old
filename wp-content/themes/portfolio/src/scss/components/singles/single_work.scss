@@ -24,6 +24,14 @@
   font-size: clamp(16px, 1.6666666667vw, 32px);
   line-height: 1.5em;
   margin-bottom: 1em;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
 }
 
 .single__work__about__link {

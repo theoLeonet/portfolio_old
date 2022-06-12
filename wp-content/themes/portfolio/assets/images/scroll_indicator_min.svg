@@ -1,7 +1,1 @@
-<svg viewBox="0 0 52 102" xmlns="http://www.w3.org/2000/svg">
-    <rect fill="none" height="100" rx="25" width="50" x="1" y="1"/>
-    <g fill="#1d1d1b">
-        <path d="M26 102A26 26 0 0 1 0 76V26a26 26 0 0 1 52 0v50a26 26 0 0 1-26 26zM26 2A24 24 0 0 0 2 26v50a24 24 0 0 0 48 0V26A24 24 0 0 0 26 2z"/>
-        <circle class="scroll__indicator__circle" cx="26" cy="26" r="16.16"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.91 60.76"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px}</style></defs><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M16.96 2.5v55.76M2.5 43.8l14.46 14.46M31.41 43.8 16.96 58.26"/></g></g></svg>

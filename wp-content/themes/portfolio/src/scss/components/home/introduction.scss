@@ -33,17 +33,16 @@
     top: 30vh;
     left: 47%;
     z-index: 10;
-    margin-top: 50vh;
+    margin-top: 30vh;
     min-width: clamp(16px, 5vw, 40px);
 
     svg {
-      width: clamp(16px, 5vw, 40px);
+      width: clamp(16px, 3vw, 40px);
+
+      animation: movecircle 2000ms infinite ease-in-out;
     }
   }
 
-  .scroll__indicator__circle {
-    animation: movecircle 3s ease-out infinite;
-  }
 
 }
 
@@ -66,17 +65,19 @@
 }
 
 @keyframes movecircle {
-  0%, 10% {
+  0% {
     transform: translateY(0);
+    opacity: 0;
   }
-  50%, 80% {
-    transform: translateY(52px);
+  25% {
+    opacity: 1;
   }
-  90% {
-    transform: translateY(0);
+  75% {
+    opacity: 1;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(80px);
+    opacity: 0;
   }
 }
 

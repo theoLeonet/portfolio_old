@@ -91,7 +91,7 @@ addEventListener('load', () => {
     function containerAnimation() {
         let containerScrollTimeline = new ScrollTimeline({
             scrollOffsets: [
-                new CSSUnitValue(30, 'percent'),
+                new CSSUnitValue(25, 'percent'),
                 new CSSUnitValue(100, 'percent')
             ]
         });
